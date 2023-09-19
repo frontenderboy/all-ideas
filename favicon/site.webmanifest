@@ -1,0 +1,14 @@
+{
+    "name": "Ideas",
+    "short_name": "Ideas",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#22223a",
+    "background_color": "#22223a",
+    "display": "standalone"
+}
