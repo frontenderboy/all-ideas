@@ -19,10 +19,25 @@
     <title>All Ideas</title>
 </head>
 <body>
+    <ul class="ideas-list">
+        <li data-tab="tab-1" class="link active-tab">Ideas</li>
+        <li data-tab="tab-2" class="link">Makets</li>
+        <li data-tab="tab-3" class="link">Local ideas</li>
+    </ul>
     
-    <div class="container"></div>
+    <div class="box hidden" data-tab-content id="tab-1">
+        <div class="container" data-container="ideas"></div>
+    </div>
+    <div class="box hidden" data-tab-content id="tab-2">
+        <div class="container" data-container="makets"></div>
+    </div>
+    <div class="box hidden" data-tab-content id="tab-3">
+        <div class="container" data-container="local-ideas"></div>
+    </div>
 
     <script src="js/index.js" type="module"></script>
     <script src="js/projects.js" type="module"></script>
+    <script src="js/makets.js" type="module"></script>
+    <script src="js/local-ideas.js" type="module"></script>
 </body>
 </html>

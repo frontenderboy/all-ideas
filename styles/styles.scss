@@ -13,20 +13,54 @@ body {
     background: $color-background;
     color: $color-white;
     font-family: 'Montserrat', sans-serif;
+    padding: 50px 0;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 0 40px;
 
     display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(3, 350px);
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
     gap: 40px
 }
 
+.ideas-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 60%;
+    min-height: 50px;
+    margin: 0 auto;
+    background-color: $color-white;
+    border-radius: 100px;
+    margin-bottom: 90px;
+    padding: 10px;
+}
+
+.link {
+    color: $color-black;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+    &:hover {
+        border-radius: 10px;
+        background-color: $color-background;
+        color: $color-white;
+    }
+}
+
 .block {
+    max-width: 350px;
     min-width: 350px;
     min-height: 300px;
     transition: transform .3s ease;
@@ -36,12 +70,28 @@ body {
     }
 }
 
+
 .block__image {
     width: 100%;
     border-radius: 10px 10px 0 0;
     display: block;
     object-fit: cover;
     height: 215px;
+}
+
+.block__image-inner {
+    height: 215px;
+    border-radius: 10px 10px 0 0;
+
+    &--ideas {
+        background-color: #FDD7E4;
+    }
+    &--makets {
+        background-color: #87CEFA;  
+    }
+    &--local-ideas {
+        background-color: #98FB98;
+    }
 }
 
 .block__wrapper {
@@ -124,4 +174,39 @@ body {
 .arrow-link {
     margin-left: 10px;
     transition: all 0.5s ease;
+}
+
+.active-tab {
+    border-radius: 10px;
+    background: $color-background;
+    color: $color-white;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1220px) {
+    .container {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media (max-width: 820px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 412px) {
+    .ideas-list {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    .link {
+        font-size: 20px;
+    }
+    .block {
+        min-width: 80%;
+    }
 }
